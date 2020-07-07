@@ -6,6 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  slideOpt = {
+    initialSlide: 0,
+    slidesPerView: 1,
+    centeredSlides: true,
+    speed: 400,
+  };
+
+  slides = [
+    {
+      imgSrc: "assets/img/logo.png",
+      imgAlt: "Logo",
+      title: "Title",
+      subTitle: "Subtitle",
+      description: "Aqui va la descripcion",
+      icon: "play-outline"
+    }
+  ]
 
   constructor() {}
 
