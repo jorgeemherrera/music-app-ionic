@@ -33,7 +33,7 @@
     "@angular/cli": "~21.2.11",
     "@angular/compiler": "~21.2.13",
     "@angular/compiler-cli": "~21.2.10",
-    "@angular/language-service": "~21.2.10",
+    "@angular/language-service": "~21.2.14",
     "@capacitor/cli": "^8.3.2",
     "@capacitor/core": "^8.1.0",
     "@ionic/angular-toolkit": "^12.3.0",
