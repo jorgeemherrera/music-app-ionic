@@ -1,12 +1,18 @@
 <ion-content padding>
-  <ion-slides pager="true" [options]="slideOpt">
-    <ion-slide *ngFor="let slide of slides">
+  <swiper-container
+    pagination="true"
+    [attr.initial-slide]="slideOpt.initialSlide"
+    [attr.slides-per-view]="slideOpt.slidesPerView"
+    [attr.centered-slides]="slideOpt.centeredSlides"
+    [attr.speed]="slideOpt.speed"
+  >
+    <swiper-slide *ngFor="let slide of slides">
       <ion-icon name="close"></ion-icon>
       <img [src]="slide.imgSrc" alt="{{ slide.imgAlt }}">
       <h1>{{ slide.title }}</h1>
-      <h2>{{ slide.subTititle }}</h2>
+      <h2>{{ slide.subTitle }}</h2>
       <p>{{ slide.description }}</p>
       <ion-icon name="{{ slide.icon }}"></ion-icon>
-    </ion-slide>
-  </ion-slides>
+    </swiper-slide>
+  </swiper-container>
 </ion-content>

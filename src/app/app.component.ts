@@ -1,27 +1,27 @@
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Capacitor } from '@capacitor/core';
+import { StatusBar, Style } from '@capacitor/status-bar';
+import { SplashScreen } from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss']
+  styleUrls: ['app.component.scss'],
+  standalone: false
 })
 export class AppComponent {
-  constructor(
-    private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar
-  ) {
+  constructor(private platform: Platform) {
     this.initializeApp();
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      if (Capacitor.isNativePlatform()) {
+        StatusBar.setStyle({ style: Style.Default });
+      }
+      SplashScreen.hide();
     });
   }
 }

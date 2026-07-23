@@ -1,4 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { HomePage } from './home.page';
@@ -7,10 +8,11 @@ describe('HomePage', () => {
   let component: HomePage;
   let fixture: ComponentFixture<HomePage>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ HomePage ],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot()],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
 
     fixture = TestBed.createComponent(HomePage);
