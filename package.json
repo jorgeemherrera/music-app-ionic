@@ -7,9 +7,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -17,7 +15,7 @@
     "@angular/core": "~22.1.4",
     "@angular/forms": "~22.1.4",
     "@angular/platform-browser": "~22.1.2",
-    "@angular/platform-browser-dynamic": "~22.0.8",
+    "@angular/platform-browser-dynamic": "~22.1.4",
     "@angular/router": "~22.1.4",
     "@capacitor/android": "^8.5.0",
     "@capacitor/core": "^8.5.1",
@@ -30,28 +28,27 @@
     "zone.js": "~0.16.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~22.1.3",
-    "@angular/cli": "~22.1.3",
+    "@angular-devkit/build-angular": "~22.1.7",
+    "@angular/cli": "~22.1.7",
     "@angular/compiler": "~22.1.2",
     "@angular/compiler-cli": "~22.1.2",
     "@angular/language-service": "~22.1.4",
     "@capacitor/cli": "^8.4.2",
     "@ionic/angular-toolkit": "^12.3.0",
     "@types/jasmine": "~6.0.0",
-    "@types/jasminewd2": "~2.0.13",
     "@types/node": "^26.2.0",
-    "codelyzer": "^6.0.2",
     "jasmine-core": "~6.3.0",
-    "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.4.4",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage-istanbul-reporter": "~3.0.3",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.3.0",
-    "protractor": "~7.0.0",
     "ts-node": "~10.9.2",
-    "tslint": "~6.1.3",
-    "typescript": "~7.0.2"
+    "typescript": "~6.0.3"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "overrides": {
+    "qs": "^6.16.0",
+    "uuid": "^11.1.1"
+  }
 }
